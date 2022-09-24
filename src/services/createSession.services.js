@@ -15,11 +15,13 @@ const createSessionServices = async (email, password) => {
     }
 
     const token = jwt.sign({
-        name: user.name
+        name: user.name,
+        isAdm: user.isAdm,
+        uuid: user.uuid
     },
         "SECRET_KEY",
         {
-            expiresIn: "1h",
+            expiresIn: "24h",
             subject: user.uuid
         })
     return { "token": token }
