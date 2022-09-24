@@ -16,7 +16,7 @@ const createSessionServices = async (email, password) => {
 
     const token = jwt.sign({
         name: user.name,
-        isAdm: user.isAdmn,
+        isAdm: user.isAdm,
         uuid: user.uuid
     },
         "SECRET_KEY",
