@@ -21,7 +21,7 @@ if (!password) {
     })
 }
 
-if (!isAdm) {
+if (typeof isAdm !== 'boolean') {
     return response.status(401).json({ 
         message: `You have to choose if you gonna be adm, or no, my friend!`
     })

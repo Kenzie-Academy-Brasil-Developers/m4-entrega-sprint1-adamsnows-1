@@ -2,8 +2,6 @@ import createSessionServices from "../services/createSession.services"
 
 const createSessionController = async (request, response) => {
     const { email, password } = request.body
-    
-
     try {
     const user = await createSessionServices(email, password)
 

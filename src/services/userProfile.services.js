@@ -11,7 +11,6 @@ const userProfileServices = (uuid) => {
     const userWithoutPassword = {
         ...user, password: undefined
     }
-    console.log(userWithoutPassword)
     return userWithoutPassword
 }
 
